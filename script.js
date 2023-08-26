@@ -1,41 +1,6 @@
 const outputElement = document.getElementById('output');
 const inputElement = document.getElementById('input');
-// const asciiArt = import('asciiArt.html');
-// import art from "./asciiArt";
 
-art = [
-    `
-                                                                                                                        
-    ***** *     **                        *                                    *****                    *******    
-    ******  **    **** *   *         *     **          *                       ******                    *       ***  
-    **   *  * **    ****   ***       **     **         ***                     **   *  *    **           *         **  
-    *    *  *  **    * *     *        **     **          *                     *    *  *   **** *         **        *   
-      *  *    **   *              ******** **                                    *  *     ****           ***          
-     ** **    **   *     ***     ********  **  ***   ***     ***  ****          ** **    * **           ** ***        
-     ** **     **  *      ***       **     ** * ***   ***     **** **** *       ** **   *                *** ***      
-     ** **     **  *       **       **     ***   ***   **      **   ****        ** *****                   *** ***    
-     ** **      ** *       **       **     **     **   **      **    **         ** ** ***                    *** ***  
-     ** **      ** *       **       **     **     **   **      **    **         ** **   ***                    ** *** 
-     *  **       ***       **       **     **     **   **      **    **         *  **    ***                    ** ** 
-        *        ***       **       **     **     **   **      **    **            *       ***                   * *  
-    ****          **       **       **     **     **   **      **    **        ****         ***        ***        *   
-    *  *****                *** *     **    **     **   *** *   ***   ***      *  *****        ***  *  *  *********    
-    *     **                  ***             **    **    ***     ***   ***    *    ***           ***  *     *****      
-    *                                               *                          *                       *                
-    **                                            *                            **                      **              
-                                                *                                                                     
-                                               *                                                                      
-                                                                                                                      
-    `,
-    `
-    N   N     t  h                K  K  SSS  
-    NN  N ii  t  h    ii          K K  S     
-    N N N    ttt hhh     nnn      KK    SSS  
-    N  NN ii  t  h  h ii n  n     K K      S 
-    N   N ii  tt h  h ii n  n     K  K SSSS  
-                                             
-    `
-    ]
     
 const commandHistory = [];
 let historyIndex = -1;
@@ -83,18 +48,3 @@ function processCommand(command) {
             return `Command not found: ${command}`;
     }
 }
-
-function addAsciiArt(){
-    let index = getRndInteger(0,2);
-    document.getElementById("art").innerHTML =  `<pre>` + art[index] + `</pre>`;
-//     fetch('asciiArt.txt')
-//   .then(response => response.text())
-//   .then(text => console.log(text))
-  // outputs the content of the text file
-}
-
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-}
-
-addAsciiArt();

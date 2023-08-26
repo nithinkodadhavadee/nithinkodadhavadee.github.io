@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Terminal Emulator</title>
+    <title>Nithin KS</title>
 </head>
 <body>
     <div id="terminal">
@@ -18,10 +18,18 @@ Type 'help' for a list of commands.
         </div>
         <input id="input" type="text" autofocus>
     </div>
-    <!-- <script type="module">
+    <script type="module">
         import art from './asciiArt.js';
-        document.getElementById("art").innerText =  art[0];
-    </script> -->
+
+        let index = getRndInteger(0,3);
+        console.log(art[0])
+        document.getElementById("art").innerHTML =  `<pre>` + art[index] + `</pre>`;
+
+
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+    </script>
     <script  src="script.js"></script>
 </body>
 </html>
