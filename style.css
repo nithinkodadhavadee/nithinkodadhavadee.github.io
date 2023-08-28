@@ -9,6 +9,10 @@ body {
     color: #0F0;
 }
 
+a {
+    color: #0F0;
+}
+
 #terminal {
     border: 2px solid #0F0;
     padding: 20px;
