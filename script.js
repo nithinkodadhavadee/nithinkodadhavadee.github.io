@@ -39,11 +39,14 @@ inputElement.addEventListener('keydown', function(event) {
 function processCommand(command) {
     switch (command) {
         case 'help':
-            return 'Available commands: help, about, contact';
+            return 'Available commands: help, about, contact, resume';
         case 'about':
             return 'This is a terminal emulator like portfolio built using HTML, CSS, and JavaScript.';
         case 'contact':
-            return 'You can reach us at nithinkodadhavadee@outlook.com.';
+            return 'You can reach me at nithinkodadhavadee@outlook.com.';
+        case 'resume':
+            window.open('./Resume.pdf', '_blank');
+            return ""
         default:
             return `Command not found: ${command}`;
     }
