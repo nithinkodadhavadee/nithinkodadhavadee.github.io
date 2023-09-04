@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Nithin KS</title>
+</head>
+<body>
+    <div id="terminal">
+        <div id="output">
+Hello, this is 
+<div id="art"></div>
+just incase that wan't legible, I am Nithin KS. <br>
+I am a Software Developer. <br> <br>
+
+Type 'help' for a list of commands.
+        </div>
+        <input id="input" type="text" autofocus>
+    </div>
+    <script type="module">
+        import art from './asciiArt.js';
+
+        let index = getRndInteger(0,3);
+        console.log(art[0])
+        document.getElementById("art").innerHTML =  `<pre>` + art[index] + `</pre>`;
+
+
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+    </script>
+    <script  src="script.js"></script>
+</body>
+</html>
