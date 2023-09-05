@@ -58,6 +58,7 @@ function processCommand(command) {
             help <br>
             link <br>
             links<br>
+            reload<br>
             resume<br>`;
         case 'links':
             return `
@@ -79,6 +80,9 @@ function processCommand(command) {
                     console.log(command.slice(7));
                     return 'Un recognized parameter. try <code>links<code> to know how to use the command.';
             }
+        case 'reload':
+            window.open('./index.html', '_self');
+            return "";
         case 'resume':
             window.open('./Resume.pdf', '_blank');
             return "";

@@ -13,6 +13,13 @@ a {
     color: #0F0;
 }
 
+#asciiArt {
+    font-size:10pt;
+    font-family:Monospace;/* */
+    white-space:pre;
+
+}
+
 #terminal {
     border: 2px solid #0F0;
     padding: 20px;
@@ -28,5 +35,5 @@ a {
     background-color: #000;
     color: #0F0;
     font-size: inherit;
-    width: 100%;
+    width: 95%;
 }
