@@ -114,11 +114,12 @@
             let deviceInfo = getOS();
             console.log(deviceInfo);
             console.log(deviceInfo.os.name === 'Linux')
-            if(deviceInfo.os.name == 'Windows Phone' || deviceInfo.os.name == 'iPhone' || deviceInfo.os.name == 'Android' || deviceInfo.os.name == 'iPad'){
-                console.log("This is a Phone or a Tablet");
-                document.getElementById('log').innerHTML = "The website is currently being built for this platfor. Kindly use a Laptop or a Desktop to use the application. <br><br>True<br>" + JSON.stringify(deviceInfo) + '<br><br>' + navigator.userAgent;
-                // window.location.replace("./portphonelio.html");
-            }
+            console.log("This is a Phone or a Tablet");
+            
+            let deviceInfoFormatted = JSON.stringify(deviceInfo, null, 4)
+            console.log(deviceInfoFormatted);
+            document.getElementById('log').innerHTML = "The website is currently being built for this platfor. Kindly use a Laptop or a Desktop to use the application. <br><br>True<br>" + `<pre style='text-align: left;'>` + deviceInfoFormatted + `</pre>` + '<br><br>' + navigator.userAgent;
+            
         }
 
     </script>
