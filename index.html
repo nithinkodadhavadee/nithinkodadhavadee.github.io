@@ -107,12 +107,13 @@
             if(deviceInfo.os.name == 'Windows Phone' || deviceInfo.os.name == 'iPhone' || deviceInfo.os.name == 'Android' || deviceInfo.os.name == 'iPad'){
                 console.log("This is a Phone or a Tablet");
                 document.getElementById('log').innerHTML = "The website is currently being built for this platfor. Kindly use a Laptop or a Desktop to use the application. <br><br>True<br>" + JSON.stringify(deviceInfo) + '<br><br>' + navigator.userAgent;
+                window.location.replace("./portphonelio.html");
             }
             else {
                 console.log("This is not a phone or a tablet");
                 document.getElementById('log').innerText = "False";
                 document.getElementById('log').innerHTML = "False<br>" + JSON.stringify(deviceInfo) + '<br><br>' + navigator.userAgent;
-                window.location.replace("./portpolio.html")
+                window.location.replace("./portpolio.html");
             }
         }
 
