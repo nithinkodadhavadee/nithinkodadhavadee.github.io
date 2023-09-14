@@ -55,14 +55,15 @@ function processCommand(command) {
         case 'help':
             return `Available commands: <br>
             <br>
-            about<br>
-            clear<br>
-            contact<br>
+            about <br>
+            clear <br>
+            contact <br>
+            device info <br>
             help <br>
             link <br>
-            links<br>
-            reload<br>
-            resume<br>`;
+            links <br>
+            reload <br>
+            resume <br>`;
         case 'links':
             return `
             Use the command <code>link --&ltplatform&gt</code> to be redirected to the following platform.<br>
