@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <div id="test"></div>
     <div id="terminal">
         <div id="output">
             Hello, this is
@@ -26,14 +27,38 @@
     <script type="module">
         import art from './asciiArt.js';
 
-        let index = getRndInteger(0, art.length);
-        console.log(art[0]);
-        // document.getElementById("asciiArt").innerHTML =  `<pre>` + art[index] + `</pre>`;
-        document.getElementById("asciiArt").innerText = art[index];
+        let testElement = document.getElementById("test");
+
+        while (true) {
+            let index = getRndInteger(0, art.length);
+            console.log(art[index]);
+            console.log("index: ", index);
+            // document.getElementById("asciiArt").innerHTML =  `<pre>` + art[index] + `</pre>`;
+            document.getElementById("asciiArt").innerText = art[index];
+
+            if (doesTextOverflow()) {
+                console.log('ASCII art overflows the terminal output.');
+            } else {
+                console.log('ASCII art fits within the terminal output width. \nBreaking Loop');
+                break;
+            }
+        }
+
 
 
         function getRndInteger(min, max) {
             return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        function doesTextOverflow() {
+            const asciiArtElement = document.getElementById('asciiArt');
+            const terminalOutput = document.getElementById('output');
+
+            const asciiArtWidth = asciiArtElement.scrollWidth;
+            const terminalOutputWidth = terminalOutput.offsetWidth;
+
+            // test.innerText = `${asciiArtWidth > terminalOutputWidth} ${asciiArtWidth}px ${terminalOutputWidth}px`;
+            return asciiArtWidth > terminalOutputWidth;
         }
     </script>
     <script src="portpolio.js"></script>
